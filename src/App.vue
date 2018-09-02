@@ -1,28 +1,9 @@
 <template>
 <div id="myapp">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">CRUD</a>
-      </div>
-    </div>
-  </nav>
+<add-header></add-header>
+<add-sidebar></add-sidebar>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-3 col-md-2 sidebar">
-        <ul class="nav nav-sidebar">
-          <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Reports</a></li>
-          <li><a href="#">Analytics</a></li>
-          <li><a href="#">Export</a></li>
-        </ul>
-      </div>
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <h2 class="sub-header">Hero List</h2>
         <a class="btn btn-success" href="add.html">Add</a>
@@ -240,10 +221,19 @@
 </div>
 </template>
 
+
 <script>
+//导入AppHeader组件
+//
+import AddHeader from './components/AppHeader.vue';
+import AddSidebar from './components/AppSidebar'
 //ES6中模块化的语法，作用的导出一个对象。
 export default {
   name: 'app',
+  components:{
+    AddHeader,
+    AddSidebar
+  },
   data () {
     return {
      
